@@ -90,10 +90,13 @@ export default function Home() {
           <Button>Get Started</Button>
         </Toolbar>
       </AppBar>
-
       <Container sx={{ py: 6 }}>
         <Grid container spacing={4}>
-          <Grid item xs={12} md={7}>
+          <Grid
+            size={{
+              xs: 12,
+              md: 7
+            }}>
             <Stack spacing={2}>
               <Typography variant="overline" color="text.secondary">
                 Design Systems
@@ -102,7 +105,7 @@ export default function Home() {
                 Ship a polished UI fast with Material UI
               </Typography>
               <Typography color="text.secondary">
-                This starter mixes Next.js 15 and MUI 6 with a clean Pages Router
+                This starter mixes Next.js 15 and MUI 7 with a clean Pages Router
                 setup. Explore common components and layout patterns.
               </Typography>
               <Stack direction={{ xs: "column", sm: "row" }} spacing={2}>
@@ -119,7 +122,11 @@ export default function Home() {
             </Stack>
           </Grid>
 
-          <Grid item xs={12} md={5}>
+          <Grid
+            size={{
+              xs: 12,
+              md: 5
+            }}>
             <Card variant="outlined">
               <CardContent>
                 <Typography variant="h6" gutterBottom>
@@ -149,7 +156,11 @@ export default function Home() {
         <Divider sx={{ my: 6 }} />
 
         <Grid container spacing={3}>
-          <Grid item xs={12} md={4}>
+          <Grid
+            size={{
+              xs: 12,
+              md: 4
+            }}>
             <Paper sx={{ p: 3 }} elevation={0}>
               <Typography variant="h6" gutterBottom>
                 Settings
@@ -171,7 +182,11 @@ export default function Home() {
             </Paper>
           </Grid>
 
-          <Grid item xs={12} md={4}>
+          <Grid
+            size={{
+              xs: 12,
+              md: 4
+            }}>
             <Paper sx={{ p: 3 }} elevation={0}>
               <Typography variant="h6" gutterBottom>
                 Activity
@@ -184,7 +199,11 @@ export default function Home() {
             </Paper>
           </Grid>
 
-          <Grid item xs={12} md={4}>
+          <Grid
+            size={{
+              xs: 12,
+              md: 4
+            }}>
             <Paper sx={{ p: 3 }} elevation={0}>
               <Typography variant="h6" gutterBottom>
                 Actions
@@ -205,7 +224,11 @@ export default function Home() {
         <Divider sx={{ my: 6 }} />
 
         <Grid container spacing={3}>
-          <Grid item xs={12} md={6}>
+          <Grid
+            size={{
+              xs: 12,
+              md: 6
+            }}>
             <Paper sx={{ p: 3 }} elevation={0}>
               <Typography variant="h6" gutterBottom>
                 Tabs
@@ -233,7 +256,11 @@ export default function Home() {
             </Paper>
           </Grid>
 
-          <Grid item xs={12} md={6}>
+          <Grid
+            size={{
+              xs: 12,
+              md: 6
+            }}>
             <Paper sx={{ p: 3 }} elevation={0}>
               <Typography variant="h6" gutterBottom>
                 Selects
@@ -265,7 +292,11 @@ export default function Home() {
         <Divider sx={{ my: 6 }} />
 
         <Grid container spacing={3}>
-          <Grid item xs={12} md={6}>
+          <Grid
+            size={{
+              xs: 12,
+              md: 6
+            }}>
             <Paper sx={{ p: 3 }} elevation={0}>
               <Typography variant="h6" gutterBottom>
                 Feedback
@@ -293,7 +324,11 @@ export default function Home() {
             </Paper>
           </Grid>
 
-          <Grid item xs={12} md={6}>
+          <Grid
+            size={{
+              xs: 12,
+              md: 6
+            }}>
             <Paper sx={{ p: 3 }} elevation={0}>
               <Typography variant="h6" gutterBottom>
                 Navigation & Inputs
@@ -326,7 +361,11 @@ export default function Home() {
         <Divider sx={{ my: 6 }} />
 
         <Grid container spacing={3}>
-          <Grid item xs={12} md={5}>
+          <Grid
+            size={{
+              xs: 12,
+              md: 5
+            }}>
             <Paper sx={{ p: 3 }} elevation={0}>
               <Typography variant="h6" gutterBottom>
                 Project Stepper
@@ -341,7 +380,11 @@ export default function Home() {
             </Paper>
           </Grid>
 
-          <Grid item xs={12} md={7}>
+          <Grid
+            size={{
+              xs: 12,
+              md: 7
+            }}>
             <Paper sx={{ p: 3 }} elevation={0}>
               <Typography variant="h6" gutterBottom>
                 Deployments Table
@@ -372,7 +415,6 @@ export default function Home() {
           </Grid>
         </Grid>
       </Container>
-
       <Drawer anchor="right" open={drawerOpen} onClose={() => setDrawerOpen(false)}>
         <Box sx={{ width: 280, p: 2 }}>
           <Typography variant="h6" gutterBottom>
@@ -402,7 +444,6 @@ export default function Home() {
           </Button>
         </Box>
       </Drawer>
-
       <Dialog open={dialogOpen} onClose={() => setDialogOpen(false)}>
         <DialogTitle>Confirm changes</DialogTitle>
         <DialogContent>
@@ -417,7 +458,6 @@ export default function Home() {
           <Button onClick={() => setDialogOpen(false)}>Confirm</Button>
         </DialogActions>
       </Dialog>
-
       <Snackbar
         open={snackbarOpen}
         autoHideDuration={3000}
