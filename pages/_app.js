@@ -4,7 +4,10 @@ import CssBaseline from "@mui/material/CssBaseline";
 import { AppCacheProvider } from "@mui/material-nextjs/v15-pagesRouter";
 import { Figtree } from "next/font/google";
 import { ThemeProvider, useTheme } from "../contexts/ThemeContext";
+import { ShadcnScope } from "../components/ShadcnScope";
+import { Toaster } from "../components/ui/sonner";
 import "../styles/styles.scss";
+import "../styles/tailwind.css";
 
 const figtree = Figtree({
     subsets: ["latin"],
@@ -58,14 +61,22 @@ function AppContent({ Component, pageProps }) {
         }
     }, []);
 
+    React.useEffect(() => {
+        document.documentElement.classList.toggle("dark", mode === "dark");
+    }, [mode]);
+
     if (!Component) {
         return null;
     }
 
+    const page = <Component {...pageProps} />;
+    const content = Component.useShadcn ? <ShadcnScope>{page}</ShadcnScope> : page;
+
     return (
         <MuiThemeProvider theme={theme}>
             <CssBaseline />
-            <Component {...pageProps} />
+            {content}
+            <Toaster />
         </MuiThemeProvider>
     );
 }
