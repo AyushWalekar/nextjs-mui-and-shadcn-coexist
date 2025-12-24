@@ -65,6 +65,18 @@ function AppContent({ Component, pageProps }) {
         document.documentElement.classList.toggle("dark", mode === "dark");
     }, [mode]);
 
+    React.useEffect(() => {
+        // Radix portals (Sheet/Dialog/Select/etc.) render into <body>. Our shadcn tokens are
+        // scoped to `.shadcn-scope`, so we also apply that class to <body> only for shadcn pages
+        // to ensure portaled content inherits the correct CSS variables.
+        if (!Component) return;
+        const enabled = Boolean(Component.useShadcn);
+        document.body.classList.toggle("shadcn-scope", enabled);
+        return () => {
+            document.body.classList.remove("shadcn-scope");
+        };
+    }, [Component]);
+
     if (!Component) {
         return null;
     }
