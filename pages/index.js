@@ -379,6 +379,18 @@ export default function Home() {
             Quick Links
           </Typography>
           <List>
+            <ListItem disablePadding>
+              <ListItem button component="a" href="/">
+                <ListItemText primary="Home" />
+              </ListItem>
+            </ListItem>
+            <ListItem disablePadding>
+              <ListItem button component="a" href="/shadcn">
+                <ListItemText primary="Shadcn" />
+              </ListItem>
+            </ListItem>
+          </List>
+          <List>
             {["Dashboard", "Releases", "Teams", "Billing"].map((item) => (
               <ListItem key={item} disablePadding>
                 <ListItemText primary={item} />

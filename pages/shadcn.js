@@ -514,6 +514,20 @@ export default function ShadcnPage() {
                         </SheetDescription>
                     </SheetHeader>
                     <div className="mt-6 space-y-2">
+                        <Button
+                            asChild
+                            variant="ghost"
+                            className="w-full justify-start"
+                        >
+                            <a href="/">Home</a>
+                        </Button>
+                        <Button
+                            asChild
+                            variant="ghost"
+                            className="w-full justify-start"
+                        >
+                            <a href="/shadcn">Shadcn</a>
+                        </Button>
                         {["Dashboard", "Releases", "Teams", "Billing"].map((item) => (
                             <Button
                                 key={item}
