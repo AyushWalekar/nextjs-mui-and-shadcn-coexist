@@ -127,10 +127,10 @@ export default function ShadcnPage() {
                                 Design Systems
                             </p>
                             <h2 className="text-4xl font-bold tracking-tight">
-                                Ship a polished UI fast with Material UI
+                                Ship a polished UI fast with Shadcn UI
                             </h2>
                             <p className="text-muted-foreground">
-                                This starter mixes Next.js 15 and MUI 6 with a clean Pages Router
+                                This starter mixes Next.js 15 and Shadcn UI with a clean Pages Router
                                 setup. Explore common components and layout patterns.
                             </p>
                             <div className="flex flex-col sm:flex-row gap-2">
